@@ -95,11 +95,11 @@
                                     Selectivo Orlando USA 2018
                                 </td>
                             </tr>
-                            <tr>
+                            <tr style="color:#004d4d; font-weight:bolder">
                                 <td class="eventos-left">
                                     <span style="margin-right:5px"><i class="fa fa-calendar"></i></span>19 de Mayo
                                 </td>
-                                <td class="eventos-right">
+                                <td  class="eventos-right">
                                     Clausura Escolar
                                 </td>
                             </tr>
@@ -163,50 +163,48 @@
 
                 <div class="main-container">
                     
-                        <div style="display:inline-block; margin-left:5%; color:black">
-                           <h2 class="header-color">CONTACTANOS</h2>
+                        <!--<div style="display:inline-block; margin-left:5%; color:black">-->
+                        <!--   <h2 class="header-color">CONTACTANOS</h2>-->
                             
-                            <div style="width:100%">
-                               <?php if(session('status')): ?>
-                                    <div class="email-status">
-                                        <?php echo e(session('status')); ?>
-
-                                    </div>
-                                <?php endif; ?>
-                                <?php foreach($errors->all() as $error): ?>
-                                    <p class="email-error">*<?php echo e($error); ?></p>
-                                <?php endforeach; ?>
-                            </div>
+                        <!--    <div style="width:100%">-->
+                        <!--       <?php if(session('status')): ?>-->
+                        <!--            <div class="email-status">-->
+                        <!--                <?php echo e(session('status')); ?>-->
+                        <!--            </div>-->
+                        <!--        <?php endif; ?>-->
+                        <!--        <?php foreach($errors->all() as $error): ?>-->
+                        <!--            <p class="email-error">*<?php echo e($error); ?></p>-->
+                        <!--        <?php endforeach; ?>-->
+                        <!--    </div>-->
                             
-                            <form class="contactForm" method="post" action="/sendEmail">
-                                <?php echo csrf_field(); ?>
-
+                        <!--    <form class="contactForm" method="post" action="/sendEmail">-->
+                        <!--        <?php echo csrf_field(); ?>-->
                                 
-                                <div class="message">
-                                    <div class="m-name">
-                                        <input class="message-text" type="text" placeholder="Tu Nombre" name="name"  value="<?php echo e(old('name')); ?>" required>
-                                    </div>
-                                    <div class="m-email">
-                                        <input class="message-text" type="email" placeholder="Tu email" name="email"  value="<?php echo e(old('email')); ?>" required>
-                                    </div>
-                                </div>
+                        <!--        <div class="message">-->
+                        <!--            <div class="m-name">-->
+                        <!--                <input class="message-text" type="text" placeholder="Tu Nombre" name="name"  value="<?php echo e(old('name')); ?>" required>-->
+                        <!--            </div>-->
+                        <!--            <div class="m-email">-->
+                        <!--                <input class="message-text" type="email" placeholder="Tu email" name="email"  value="<?php echo e(old('email')); ?>" required>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
                                 
                                 
-                                <div class="message">
-                                    <textarea class="message-textArea" placeholder="mensaje" name="content"  value="<?php echo e(old('content')); ?>" required></textarea>
-                                </div>
-                                <div class="message" style="margin-top:10px">
-                                    <button class="mbutton">send message</button>
-                                </div>
+                        <!--        <div class="message">-->
+                        <!--            <textarea class="message-textArea" placeholder="mensaje" name="content"  value="<?php echo e(old('content')); ?>" required></textarea>-->
+                        <!--        </div>-->
+                        <!--        <div class="message" style="margin-top:10px">-->
+                        <!--            <button class="mbutton">send message</button>-->
+                        <!--        </div>-->
                           
-                            </form> 
-                        </div>
+                        <!--    </form> -->
+                        <!--</div>-->
                         
                         <div style="display:inline-block; vertical-align:top; margin:5%; color:black">
                             <div class="m-top link"><span class="bold head3">Email: </span>&nbsp;itpusa07@gmail.com</div>
                             <br>
                             <div class="link"><span class="bold head3">Our Facebook: </span><a style="text-decoration:none; color:inherit; cursor:pointer" href="https://www.facebook.com/imagenes.tradiciones">&nbsp; <i class="fa fa-facebook-square"></i> </a></div>
-                            
+                            <div class="m-top link"><span class="bold head3">Telefono: </span>&nbsp;(908)334-1286</div>
                         </div>
                             
                         <div style="display:block; text-align:center; margin-top:10%; margin-bottom:10px">

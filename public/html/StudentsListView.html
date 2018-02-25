@@ -212,8 +212,7 @@
             <div class="header">Birthdays Today</div>
 
             <div ng-repeat="student in theStudent.students | filter: theStudent.todayBday as filteredItems">
-                    <div>{{student.bday}}</div>
-                    <div>{{student.firstname}}</div>
+                    <div><span><i class="fa fa-gift"></i></span> {{student.firstname}} {{student.lastname}} on {{student.bday}}</div>
             </div>
             <div ng-if="!filteredItems.length">No Birthdays today...</div>
             

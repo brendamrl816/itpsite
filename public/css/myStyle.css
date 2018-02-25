@@ -29,19 +29,19 @@ select:focus{
 
 
 ::-webkit-input-placeholder {
-   color: #6d6d6d;
+   color: #e6f8ff;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #6d6d6d;  
+   color: #e6f8ff;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #6d6d6d  
+   color: #e6f8ff;  
 }
 
 :-ms-input-placeholder {  
-   color: #6d6d6d;  
+   color: #e6f8ff;  
 }
 
 
@@ -94,7 +94,7 @@ body{
     left: 5%;
     top: 25%;
     width: 90%;
-    background-color: #9c756e8c;
+    background-color: rgba(156, 117, 110, 0.7);
     min-width: 200px;
     font-size:60%;
 }
@@ -183,7 +183,7 @@ body{
   left:0;
   width:100%;
   height:100%;
-  background-color: #8a7878;
+  background-color: rgb(138, 120, 120);
   opacity: 0.9;
   min-width:350px;
   min-height: 500px;
@@ -200,7 +200,7 @@ body{
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
-  background-color:#88462f3b;
+  background-color: rgba(0, 75, 102, 0.7);
   box-shadow: 4px 4px 80px #000;
   font-family: Arial, Helvetica, sans-serif;
   min-width:350px;
@@ -243,7 +243,7 @@ body{
 
 .uploadButton{
     width:80px;
-    background-color: #968383db;
+    background-color: rgb(150, 131, 131);
     color: #ffffff;
     padding:5px;
     box-shadow: 0px 1px 1px #eceaeacc;
@@ -342,7 +342,7 @@ body{
 
 .adminButton{
     padding:11px;
-    background-color:#9c756e8c;
+    background-color:rgb(150, 131, 131);
     color:white;
     font-weight: bold;
     border:none;
@@ -374,7 +374,7 @@ body{
 .student{
     display: inline-block;
     margin-bottom: 10px;
-    border-bottom: 1px solid #8a8686a6;
+    border-bottom: 1px solid rgba(138, 134, 134, 0.7);
     width:100%;
     padding-bottom: 5px;
  
@@ -396,7 +396,7 @@ body{
 }
 
 .birtdaybox{
-    background-color:#9c756e8c;
+    background-color:rgba(156, 117, 110, 0.5);
     padding:5%;
 }
 
@@ -412,21 +412,21 @@ body{
         left:0;
         width:100%;
         height:100%;
-        background-color:#fdfdfd;
+        background-color:rgb(253, 253, 253);
     }
     
    
     
     
     .h-move{
-        color:#5B1729;
+        color: rgb(91, 23, 41);
     }
     
    
     
     .section{
-        color:#737373;
-        background-color: #f2f2f2;
+        color:rgb(115, 115, 115);
+        background-color: rgb(242, 242, 242);
         /*font-size: 12px;*/
         font: 11px/1 webFont, Verdana, sans-serif;
     }
@@ -437,7 +437,7 @@ body{
         z-index:10;
         top:25px;
         left:5%;
-        background-color:#bf8f8f;
+        background-color:#c6dec4;
         border-radius: 25px;
         font-size:200%;
         border:1px solid transparent;
@@ -560,7 +560,7 @@ body{
      .slideRelative{
         margin-bottom:0px;
         min-width:200px;
-        background-color:#420101de;
+        background-color:rgba(66, 1, 1, 0.5);
         color:white;
     }
     
@@ -590,7 +590,7 @@ body{
     .eventos{
         margin-bottom:0px;
         min-width:200px;
-        background-color:#420101de;
+        background-color:rgba(66, 1, 1, 0.5);
         color:white;
         padding-top:2%;
         padding-bottom:2%;
@@ -614,8 +614,8 @@ body{
     
     
     .pink{
-        color:white;
-        background-color:#989696;
+        color:#343232;
+        background-color:#99ffbb;
         padding-top:15px;
         padding-bottom:15px;
     }
@@ -738,7 +738,7 @@ body{
         padding-bottom:10px;
         color: #f1efef;
         font-weight: bold;
-        background-color:#651d1d7d;
+        background-color:rgba(101, 29, 29, 0.8);
         z-index:3;
         
     }
@@ -796,7 +796,7 @@ body{
     }
     
     .opacity{
-        opacity:0.65;
+        opacity:0.8;
     }
    
    .email-status{
