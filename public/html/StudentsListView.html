@@ -1,0 +1,233 @@
+
+
+
+<div ng-controller = "addStudentCtrl as add">
+    
+    
+    <div style="display:inline-block; width:100%">
+        <div class="header" style="float:left">LISTA DE ESTUDIANTES</div>
+        <div style="float:left; margin-left:20px"><button class="adminButton" ng-click="add.toggleAddMenu($event)">Add <span><i class="fa fa-user-plus"></i></span></button></div>
+         
+    
+        <addmodal showmodal="add.addMenu">
+                <form name="sform" class="form" style="margin-top:2%" novalidate>
+                    
+                    <div class="addImage">
+                        <div>
+                            <img class="addImage-pic" ngf-thumbnail="add.pic || '/student_pictures/default.png'">
+                        </div>
+                        
+                        <!--<input type="file" id="photo" placeholder="Picture" file-path-changed="fileSelected(files)">-->
+                        <button class="uploadButton" ngf-select ng-model="add.pic" name="pic" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-resize="{width: 800, height: 800}">Upload</button>    
+                    </div>
+                    
+                    
+                    
+                    <div>
+                        <div class="error" ng-show="sform.firstname.$invalid">*</div>
+                        <input class="form-control" type="text" name="firstname" placeholder="First Name" ng-model="add.firstname" ng-required="true">
+                    </div>
+                    <div>
+                        <div class="error" ng-show="sform.lastname.$invalid">*</div>
+                        <input class="form-control" type="text" name="lastname" placeholder="Last Name" ng-model="add.lastname" required>
+                    </div>
+                    <div>
+                        <!--<div class="error" ng-show="sform.email.$invalid">*</div>-->
+                        <input class="form-control" type="text" name="email" placeholder="Email" ng-model="add.email">
+                    </div>
+                    <div>
+                        <input class="form-control" type="date" name="dob" placeholder="Date of Birth" ng-model="add.dob">
+                    </div>
+                    <div>
+                        <div class="error" ng-show="sform.phone.$invalid">*</div>
+                        <input class="form-control" type="text" name="phone" placeholder="Phone"  phone-input ng-model="add.phone" required>
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" placeholder="Parents" ng-model="add.parents">
+                    </div>
+                    
+                        <div style="display:inline-block; margin-top:1%">
+                           
+                            <div style="float:left">
+                                <img class="addId-pic" ngf-thumbnail="add.idform || '/student_pictures/noid.jpg'">
+                            </div>
+                             <div style="float:left">
+                                <button class="uploadButton" ngf-select ng-model="add.idform" name="idform" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-resize="{width: 800, height: 800}">Upload Id</button>
+                            </div>
+                        </div>
+
+                    
+                        <div style="display:block; margin-top:2%">
+                           <button type="submit" ng-disabled="sform.$invalid" class="loginButton" ng-click="add.add(add.firstname, add.lastname, add.email, add.dob, add.phone, add.parents, add.pic, add.idform)">save </button>
+                            <button class="loginButton" ng-click="add.cancelAdd()">cancel</button>
+                        </div>
+                        
+                </form>
+        </addmodal>
+    </div>
+   
+    
+</div>
+
+<br>
+
+<div style="width:100%" ng-controller="studentCtrl as theStudent">
+    
+    <div class="listSide">
+        <div class="listSide-content">
+            <div ng-controller="studentMenuCtrl as menu" ng-repeat="student in theStudent.students | orderBy : 'lastname' ">
+                   
+                   
+                   <div class="student">
+                       <div class="student-content">
+                           <div style="float:left" ng-click="menu.toggleMenu($event)">
+                                <img class="profilePic" ngf-thumbnail="student.pic || '/student_pictures/default.png'">
+                            </div>
+                            <!--<img ng-if="student.pic != ''" style="height:50px; width:50px" ng-src="{{student.pic}}">-->
+                            <!--<img ng-if="student.pic == ''" style="height:50px; width:50px" src="/student_pictures/default.png"/>-->
+                            <div class="student-details">{{student.firstname}}  {{student.lastname}}</div>
+                       </div>
+                    </div> 
+                    
+                    
+                    <menumodal question="menu.showStudentMenu">
+                       
+                                <div class="studentMenuOptions">
+                                    <div class="studentMenuIcons" ng-click="menu.edit($event)"> Edit
+                                        <i class="fa fa-pencil fa-lg"></i>
+                                    </div>
+                                    <div class="studentMenuIcons" ng-click="menu.delete($event)">Delete 
+                                        <i class="fa fa-trash fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div style="display:inline-block; margin-top:30px; margin-bottom:30px; width:100%">
+                                    <div style="width:20%; margin-left:5%; float:left; vertical-align:center">
+                                        <img class="studentMenu-picture" ngf-thumbnail="student.pic || '/student_pictures/default.png'">
+                                        <!--<img ng-if="student.pic != ''" style="height:100px; width:100px" ng-src="{{'/'.student.pic}}">-->
+                                        <!--<img ng-if="student.pic == ''" style="height:100px; width:100px" src="/student_pictures/default.png"/>-->
+                                    </div>
+                                    
+                                    <div style="margin-left:2%; width:68%; float:left">
+                                        <div class="studentMenu-content">
+                                            <span>{{student.firstname}} {{student.lastname}}</span>
+                                        </div>
+                                        <div class="studentMenu-content">
+                                            <span>{{student.email}}</span>
+                                        </div>
+                                        <div class="studentMenu-content">
+                                            <span>{{student.dob}}</span>
+                                        </div>
+                                        <div class="studentMenu-content">
+                                            <span>{{student.phone | tel}}</span>
+                                        </div>
+                                        <div class="studentMenu-content"> 
+                                            <span> {{student.parents}}</span>
+                                        </div>
+                                       
+                                        <div class="studentMenu-content">
+                                            <img style="height:20px; width:60px" ngf-thumbnail="student.idform || '/student_pictures/noid.jpg'">
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                    </menumodal>
+                    
+                    <menumodal question="menu.editStudent" ng-click="$event.stopPropagation()">
+                        <form name="editform" class="form" style="margin-top:2%">
+                            
+                            <div class="addImage">
+                                <div>
+                                    <img class="addImage-pic" ngf-thumbnail="menu.picUpdate || menu.currentPic || '/student_pictures/default.png'">
+                                </div>
+
+                                <button class="uploadButton" ngf-select ng-model="menu.picUpdate" name="pic" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-resize="{width: 800, height: 800}">Upload</button>
+                            </div>
+                            <div>
+                                <div class="error" ng-show="editform.firstname.$invalid">*</div>
+                                <input class="form-control" type="text" name="firstname" placeholder="first Name" ng-model="menu.firstnameUpdate" required>
+                            </div>
+                            <div>
+                                <div class="error" ng-show="editform.lastname.$invalid">*</div>
+                                <input class="form-control" type="text" name="lastname" placeholder="Last Name" ng-model="menu.lastnameUpdate" required>
+                            </div>
+                            <div>
+                                <!--<div class="error" ng-show="editform.email.$invalid">*</div>-->
+                                <input class="form-control" type="text" name="email" placeholder="Email" ng-model="menu.emailUpdate">
+                            </div>
+                            <div>
+                                <input class="form-control" type="date" placeholder="DOB" ng-model="menu.dobUpdate">
+                            </div>
+                            <div>
+                                <div class="error" ng-show="editform.phone.$invalid">*</div>
+                                <input class="form-control" type="text" name="phone" placeholder="Phone Number" phone-input ng-model="menu.phoneUpdate" required>
+                            </div>
+                            <div>
+                                <input class="form-control" type="text" placeholder="Parents" ng-model="menu.parentsUpdate">
+                            </div>
+                            
+                            
+                            <div style="display:inline-block; margin-top:1%">
+                           
+                                <div style="float:left">
+                                    <img class="addId-pic" ngf-thumbnail="menu.idformUpdate || menu.currentId || '/student_pictures/noid.jpg'">
+                                </div>
+                                 <div style="float:left">
+                                    <button class="uploadButton" ngf-select ng-model="menu.idformUpdate" name="id" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-resize="{width: 800, height: 800}">Upload Id</button>
+                                </div>
+                            </div>
+                            
+                            <div style="display:block; margin-top:2%">
+                               <button class="loginButton" type="submit" ng-disabled="editform.$invalid" ng-click="menu.update(student.id, menu.firstnameUpdate, menu.lastnameUpdate, menu.emailUpdate, menu.dobUpdate, menu.phoneUpdate, menu.parentsUpdate, menu.picUpdate, menu.idformUpdate, $index)">save </button>
+                                
+                                <button class="loginButton" ng-click="menu.cancelUpdate()">cancel</button>
+                            </div> 
+                            
+                            
+                        </form>
+                    </menumodal>
+                    
+                    <continuemodal question='menu.verifyDeletion' ng-click="$event.stopPropagation()">
+                        <div>
+                            <div>
+                                <div>Are you sure you want to delete {{student.firstname}} {{student.lastname}}?</div>
+                                <div>
+                                    <button class="loginButton" ng-click="menu.yesDelete(student.id, $index)"><span>YES</span></button> 
+                                    <button class="loginButton" ng-click="menu.noDelete()"><span>NO</span></button>
+                                </div>
+                            </div
+                        </div>
+                    </continuemodal>
+     
+                </div>
+            </div>  
+        </div>
+        
+    </div>
+    
+    <!--********Birthdays*********-->
+    <div class="bdaySide">
+        <div class="birtdaybox">
+            <div class="header">Birthdays Today</div>
+
+            <div ng-repeat="student in theStudent.students | filter: theStudent.todayBday as filteredItems">
+                    <div>{{student.bday}}</div>
+                    <div>{{student.firstname}}</div>
+            </div>
+            <div ng-if="!filteredItems.length">No Birthdays today...</div>
+            
+            <div class="header">Upcoming Birthdays</div>
+            
+            <div ng-repeat="student in theStudent.students | filter: theStudent.upComingBday | orderBy: 'bday' as upcomingItems">
+                <div><span><i class="fa fa-gift"></i></span> {{student.firstname}} {{student.lastname}} on {{student.bday}}</div>
+                <br>
+            </div>
+            <div ng-if="!upcomingItems.length">No upcoming Birthdays...</div>
+        </div>
+    
+           
+    </div>
+
+</div>    
+ 

@@ -1,0 +1,852 @@
+@media screen and (max-width: 500px) {
+
+    .LogOutButton{
+        
+        margin-right:10px;
+        margin-left:5%;
+        float:left;
+    }
+    
+       .adminBody-content{
+        font-size:90%;
+    }
+
+    .student-content{
+        font-size:90%;
+    }
+    
+    .listSide{
+      width: 85%;
+      margin-left:6%;
+    }
+    
+    .bdaySide{
+        margin-left:8%;
+        width: 80%;
+    }
+    
+    .profilePic{
+        height:35px;
+        width:35px;
+    }
+
+    .student-details{
+        margin-left:5px;
+    }
+    
+    .header{
+        font-size: 100%;
+    }
+   
+}
+
+
+@media screen and (orientation:landscape) and (min-width: 850px){
+
+    .adminBody-content{
+        font-size:100%;
+    }
+    
+    .student-content{
+        font-size:110%;
+    }
+    
+  
+    .profilePic{
+        height:40px;
+        width:40px;
+    }
+    
+    .student-details{
+        margin-left:10px;
+    }
+    
+    .header{
+        font-size: 120%;
+    }
+    
+    .listSide{
+      width: 55%;
+      margin-left:5%;
+    }
+    
+    .bdaySide{
+        width: 35%;
+    }
+
+}
+
+@media screen and (orientation:landscape) and (min-width: 1100px){
+
+    .adminBody-content{
+        font-size:110%;
+    }
+    
+    .student-content{
+        font-size:120%;
+    }
+    
+  
+    .profilePic{
+        height:45px;
+        width:45px;
+    }
+    
+
+    .header{
+        font-size: 130%;
+    }
+    
+    .listSide{
+      width: 50%;
+    }
+    
+    .bdaySide{
+        margin-left:10%;
+        width: 25%;
+    }
+    
+    .LogOutButton{
+        margin-left:10px;
+        margin-right:10%;
+    }
+
+}
+
+@media screen and (min-width:350px){
+    
+    .message-text{
+        width:200px;
+    }
+    
+    .message-textArea{
+        width:200px;
+    }
+}
+
+
+@media screen and (min-width: 400px) {
+
+    .container{
+        left: 12%;
+        width: 75%;
+       font-size:70%;
+    }
+    
+    .loginButton{
+        font-size:small;
+    }
+    
+    .form-control{
+        width: 80%;
+        font-size:100%;
+    }
+    
+    .addImage-pic{
+        width:90px;
+        height:90px;
+    }
+    
+    .addId-pic{
+        width:110px;
+        height:25px;
+    }
+    
+    .uploadButton{
+        width:85px;
+    }
+    
+    .studentMenu-content{
+        font-size:70%;
+    }
+    
+   
+    .enterDiv{
+        font-size:95%;
+    }
+    
+    .message-text{
+        width:225px;
+    }
+    
+    .message-textArea{
+        width:225px;
+    }
+    
+}
+
+@media screen and (min-width:450px){
+    
+ 
+    .message-text{
+        width:250px;
+    }
+    
+    .message-textArea{
+        width:250px;
+    }
+    
+    .eventos-left{
+        width:45%;
+    }
+}
+
+@media screen and (min-width:500px){
+    
+    
+    .main-container{
+        width:80%;
+        margin-left: 10%;
+    }
+    
+    
+   
+    .section{
+        font-size: 12px;
+    }
+    
+    .enterDiv{
+        font-size:100%;
+    }
+    
+
+    .message-text{
+        width:275px;
+    }
+    
+    .message-textArea{
+        width:275px;
+    }
+    
+    .divMenu{
+        width:70%;
+    }
+    
+    .close-nav{
+        left:65%;
+    }
+    
+    .eventos-left{
+        width:40%;
+    }
+   
+  
+}
+
+
+@media screen and (min-width: 600px) {
+
+    .container{
+        left: 20%;
+        width: 60%;
+       font-size:80%;
+    }
+    
+    .form-control{
+        width: 70%;
+        
+    }
+    
+    .loginButton{
+        font-size:medium;
+    }
+    
+    .addImage-pic{
+        width:100px;
+        height:100px;
+    }
+    
+    .addId-pic{
+        width:120px;
+        height:30px;
+    }
+    
+    .uploadButton{
+        width:90px;
+        margin-bottom:10px;
+    }
+    
+    .studentMenu-content{
+        font-size:75%;
+    }
+    
+    .message-text{
+        width:325px;
+    }
+    
+    .message-textArea{
+        width:325px;
+    }
+    
+    
+    .enterDiv{
+        font-size:105%;
+    }
+    
+    .main-container{
+        width:70%;
+        margin-left: 15%;
+    }
+    
+    .divMenu{
+        width:60%;
+    }
+    
+    .close-nav{
+        left:55%;
+    }
+    
+    .eventos-left{
+        width:35%;
+    }
+
+}
+
+
+@media screen and (min-width: 700px) {
+    .message-text{
+        width:350px;
+    }
+    
+    .message-textArea{
+        width:350px;
+    }
+    
+    .divMenu{
+        width:50%;
+    }
+    
+    .close-nav{
+        left:47%;
+    }
+
+}
+
+@media screen and (min-width: 750px) {
+
+    .container{
+        left: 22%;
+        width: 55%;
+       font-size:90%;
+    }
+    
+    .form-control{
+        width: 60%;
+        height:40px;
+    }
+    
+    .loginButton{
+        font-size:large;
+    }
+    .addImage-pic{
+        width:150px;
+        height:150px;
+    }
+    
+    .addId-pic{
+        width:150px;
+        height:30px;
+    }
+    
+    .uploadButton{
+        width:100px;
+    }
+    
+    .studentMenu-content{
+        font-size:80%;
+    }
+    
+     .message-text{
+        width:375px;
+    }
+    
+    .message-textArea{
+        width:375px;
+    }
+    
+    .eventos-left{
+        width:20%;
+    }
+}
+
+@media screen and (min-width:900px){
+    
+
+    .m-name{
+        display:inline-block;
+    }
+    
+    .m-email{
+        display:inline-block;
+        margin-left:5px;
+    }
+    
+    .message-text{
+        width:250px;
+    }
+    
+    .message-textArea{
+        width:515px;
+    }
+    
+    .divMenu{
+        width:40%;
+    }
+    
+    .close-nav{
+        left:37%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    .container{
+        left: 30%;
+        width: 40%;
+       font-size:100%;
+    }
+    
+    .form-control{
+        width: 50%;
+    }
+    
+    .addImage-pic{
+        width:200px;
+        height:200px;
+    }
+    
+    .addId-pic{
+        width:180px;
+        height:30px;
+    }
+    
+    .uploadButton{
+        width:120px;
+    }
+    
+    .studentMenu-content{
+        font-size:90%;
+    }
+    
+    .enterDiv{
+        font-size:130%;
+    }
+    
+     .main-container{
+        width:80%;
+        margin-left:10%;
+    }
+    
+    .divMenu{
+        width:30%;
+    }
+    
+    .close-nav{
+        left:27%;
+    }
+    .eventos-left{
+        width:15%;
+    }
+    
+}
+
+@media screen and (min-width: 1500px) {
+
+    .container{
+        left: 35%;
+        width: 30%;
+    }
+    
+    .studentMenu-content{
+        font-size:100%;
+    }
+    
+    .main-container{
+        width:70%;
+        margin-left:15%;
+    }
+    
+    .divMenu{
+        width:25%;
+    }
+    
+    .close-nav{
+        left:23%;
+    }
+    
+}
+
+
+
+/****************************************HEIGHTS***********************************************/
+
+
+@media screen and (min-height: 350px){ 
+   
+    .message-textArea{
+        height:120px;
+    }
+    
+   
+}
+
+
+@media screen and (min-height: 450px){ 
+    .message{
+        margin-top:5px;
+    }
+    
+     .message-text{
+        height:25px;
+    }
+    
+    .message-textArea{
+        height:150px;
+    }
+    
+    
+}
+
+@media screen and (min-height: 550px){ 
+    
+    
+     .message-text{
+        height:30px;
+    }
+    
+    .message-textArea{
+        height:200px;
+    }
+    
+    .mainHomePic-container{
+        height:55%;
+    }
+    
+    #myMenu{
+        margin-top:150px;
+    }
+}
+
+@media screen and (min-height: 650px){ 
+    
+    
+    .bigScreen{
+        display: block;
+    }
+    
+    .smallScreen{
+        margin-top: 10px;
+    }
+    
+    .message{
+        margin-top:10px;
+    }
+    
+     .message-text{
+        height:35px;
+    }
+    
+    .message-textArea{
+        height:300px;
+    }
+ 
+    #myMenu{
+        margin-top:200px;
+    }
+}
+
+
+@media screen and (min-height: 720px){ 
+
+    .message-textArea{
+        height:350px;
+    }
+}
+
+@media screen and (min-height: 760px){ 
+
+     .message-text{
+        height:40px;
+    }
+    
+    /*.message-textArea{*/
+    /*    height:410px;*/
+    /*}*/
+}
+
+
+@media screen and (min-height: 850px){ 
+
+    /*.message-textArea{*/
+    /*    height:500px;*/
+    /*}*/
+    
+    #myMenu{
+        margin-top:250px;
+    }
+}
+
+@media screen and (min-height: 1050px){ 
+
+    /*.message-textArea{*/
+    /*    height:600px;*/
+    /*}*/
+    
+    #myMenu{
+        margin-top:300px;
+    }
+}
+
+
+
+
+
+@media screen and (orientation:landscape) and (max-aspect-ratio: 16/9) {
+
+    .container{
+        top:20%;
+    }
+    
+    .addImage-pic{
+        width:90px;
+        height:80px;
+    }
+    
+    .addId-pic{
+        width:100px;
+        height:20px;
+    }
+    
+    .uploadButton{
+        width:70px;
+        padding:1px;
+    }
+   
+   .form-control{
+        height:15px;
+        
+    }
+    
+   
+}
+
+
+@media screen and (orientation:landscape) and (min-aspect-ratio: 16/9) {
+     .container{
+        top:20%;
+    }
+    
+}
+
+@media screen and (orientation:landscape) and (min-aspect-ratio: 4/3) {
+
+    .container{
+        top:15%;
+    }
+    
+
+    
+   
+}
+
+@media screen and (orientation:landscape) and (min-aspect-ratio: 3/2) {
+
+    .container{
+        top:12%;
+    }
+    
+}
+
+@media screen and (orientation:landscape) and (min-aspect-ratio: 8/5) {
+
+    .container{
+        top:8%;
+    }
+    
+    .container{
+        top:20%;
+    }
+    
+    .addImage-pic{
+        width:90px;
+        height:80px;
+    }
+    
+    .addId-pic{
+        width:100px;
+        height:20px;
+    }
+    
+    .uploadButton{
+        width:70px;
+        padding:1px;
+    }
+   
+   .form-control{
+        height:15px;
+        
+    }
+    
+   
+}
+
+
+@media screen and (orientation:landscape) and (min-width: 900px) and (min-height:600px){
+
+    .container{
+        top:25%;
+    }
+    
+  
+    
+}
+
+@media screen and (orientation:landscape) and (min-width: 1000px) and (min-height:700px){
+
+    .container{
+        top:25%;
+    }
+    
+    
+}
+
+@media screen and (orientation:landscape) and (min-aspect-ratio: 8/5) and (max-height:500px){
+    
+    .ng-modal-dialog {
+        top:60%;
+    }
+    .studentMenu-content{
+        font-size:80%;
+    }
+}
+
+@media screen and (min-width: 400px) and (min-height: 700px) { 
+    .mainPic{
+        /*background-image: url('/pictures/main.jpg');*/
+        background-attachment: fixed;
+    }
+    
+    
+}
+
+@media screen and (min-width: 500px) and (min-height: 500px) { 
+
+    .section{
+        font-size: 11px;
+    }
+    
+    
+    .m-top{
+        margin-top:25px;
+    }
+    
+    .mainHomePic-container{
+        width:15%;
+    }
+    
+    .mainPic{
+        height:300px;
+    }
+    
+
+}
+
+
+@media screen and (min-width: 600px) and (min-height: 500px) { 
+}
+
+@media screen and (min-width: 700px) and (min-height: 700px) { 
+    
+    .section{
+        font-size: 12px;
+    }
+    
+    /*.enterDiv{*/
+    /*    font-size:105%;*/
+    /*}*/
+    
+    .m-top{
+        margin-top:30px;
+    }
+    
+    .mainHomePic-container{
+        width:20%;
+    }
+    
+    
+    
+    .mainPic{
+        height:400px;
+    }
+    
+}
+
+@media screen and (min-width: 900px) and (min-height: 800px) { 
+    
+    
+    
+    .smallScreen{
+        margin-top:5px;
+    }
+    
+    .bigScreen{
+        display: block;
+    }
+    
+    
+    
+    .section{
+        font-size: 14px;
+    }
+    
+    
+    .m-top{
+        margin-top:35px;
+    }
+    
+    .mainPic{
+        height:450px;
+    }
+    
+   
+}
+
+
+@media screen and (min-width: 900px) and (min-height: 900px) { 
+    .section{
+        font-size: 16px;
+    }
+    
+    /*.enterDiv{*/
+    /*    font-size:110%;*/
+    /*}*/
+    
+    
+    .m-top{
+        margin-top:40px;
+    }
+    
+    .mainPic{
+        height:500px;
+    }
+    
+   
+}
+
+
+
+@media screen and (min-width: 1200px) and (min-height: 900px) { 
+    .section{
+        font-size: 18px;
+    }
+
+    /*.enterDiv{*/
+    /*    font-size:130%;*/
+    /*}*/
+    
+    .m-top{
+        margin-top:45px;
+    }
+    
+  
+}
