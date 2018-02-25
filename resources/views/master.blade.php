@@ -6,13 +6,13 @@
         <title> @yield('title') </title>
         
         <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="/node_modules/fullPage.js/jquery.fullPage.css"/>
+        <link rel="stylesheet" type="text/css" href="/node_modules/fullpage.js/dist/jquery.fullpage.css"/>
         
         <script src="/node_modules/jquery/dist/jquery.min.js"></script>
         <script src="/node_modules/jquery/dist/jquery.js"></script>
         <script src="/node_modules/jquery-ui/jquery-ui.min.js"></script>
-        <script src="/node_modules/fullPage.js/vendors/jquery.easings.min.js"></script>
-        <script type="text/javascript" src="/node_modules/fullPage.js/jquery.fullPage.js"></script>
+        <script src="/node_modules/fullpage.js/vendors/jquery.easings.min.js"></script>
+        <script type="text/javascript" src="/node_modules/fullpage.js/dist/jquery.fullpage.js"></script>
         <script type="text/javascript" src="/js/fullpage.js"></script>
         
         
