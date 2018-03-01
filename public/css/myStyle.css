@@ -384,7 +384,7 @@ body{
     width:90%;
     font-family: Helvetica, sans-serif;
     font-weight: 200;
-    text-shadow: 2px 1px 2px #b7b4b4;
+    /*text-shadow: 2px 1px 2px #b7b4b4;*/
     font-size: 110%;
 }
 
