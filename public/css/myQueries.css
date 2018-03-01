@@ -1,8 +1,6 @@
 
 @media screen and (max-width: 450px){
-    .student-details{
-        font-weight: bold;
-    }
+    
 }
 
 @media screen and (max-width: 500px) {
@@ -737,6 +735,8 @@
     
     
 }
+
+
 
 @media screen and (min-width: 500px) and (min-height: 500px) { 
 
