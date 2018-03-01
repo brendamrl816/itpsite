@@ -392,9 +392,8 @@ body{
     float:left;
     margin-top:20px;
     margin-left:5px;
-    color:#403f3f;
-    /*text-shadow: 1px 1px 1px #887a7a;*/
-    /*font-weight:bold;*/
+    color:#5d5b5b;
+    font-weight:bold;
 }
 
 .birtdaybox{

@@ -46,6 +46,19 @@
 }
 
 
+@media screen and (orientation:landscape) and (min-width: 750px){
+
+    .student-details{
+        font-weight: normal;
+    }
+}
+
+@media screen and (orientation:portrait) and (min-width: 450px){
+
+    .student-details{
+        font-weight: normal;
+    }
+}
 @media screen and (orientation:landscape) and (min-width: 850px){
 
     .adminBody-content{
