@@ -392,8 +392,8 @@ body{
     float:left;
     margin-top:20px;
     margin-left:5px;
-    color:#666666;
-    text-shadow: 1px 1px 1px #887a7a;
+    color:#403f3f;
+    /*text-shadow: 1px 1px 1px #887a7a;*/
     /*font-weight:bold;*/
 }
 
