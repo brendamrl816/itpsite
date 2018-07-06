@@ -1,6 +1,6 @@
 
-@media screen and (max-width: 450px){
-    
+@media screen and (max-width: 400px){
+   
 }
 
 @media screen and (max-width: 500px) {
@@ -39,10 +39,8 @@
         margin-left:5px;
     }
     
-    .header{
-        font-size: 100%;
-    }
    
+    
 }
 
 
@@ -131,6 +129,84 @@
 
 }
 
+
+
+@media screen and (orientation:portrait){
+
+    .danzas-main{
+        max-width:500px;
+    }
+}
+
+@media screen and (orientation:landscape){
+    .main-container{
+        padding: 0 20% 0 20%;
+    }
+    
+    .story-left{
+        width:60%;
+        margin:0px 35px 20px 0px;
+    }
+    
+    .theSkew-content{
+        padding:3% 5% 3% 5%;
+    }
+    
+    .sktop:before{
+        -webkit-transform: skewY(-4deg);
+        -ms-transform: skewY(-4deg);
+        transform: skewY(-4deg);
+    }
+    
+    .skbottom:before{
+         -webkit-transform: skewY(3deg);
+        -ms-transform: skewY(3deg);
+        transform: skewY(3deg);
+    }
+    
+    .evHeader{
+        font-size:200%;
+        margin-left:10%;
+    }
+    
+    .dHeader{
+        font-size:200%;
+        margin:50px 35% 0px 0px;
+    }
+    
+    .danzas-main{
+        padding:0px 0px 0px 0px;
+        margin:0px;
+    }
+    
+    .danzas-container{
+        width:35%;
+    }
+    
+    .dLeft{
+        margin-top:0px;
+        margin-bottom:10px;
+    }
+    
+    .dRight{
+        margin-top:0px;
+        margin-bottom:150px;
+    }
+    
+    .eventsDisplay{
+        padding: 50px 15% 50px 15%;
+    }
+    
+    .eventos-left{
+        padding-right:50px;
+        
+    }
+    
+}
+
+
+
+
 @media screen and (min-width:350px){
     
     .message-text{
@@ -141,6 +217,7 @@
         width:200px;
     }
 }
+
 
 
 @media screen and (min-width: 400px) {
@@ -178,6 +255,10 @@
         font-size:70%;
     }
     
+    
+    .load-letters-container{
+        font-size:150%;
+    }
    
     .enterDiv{
         font-size:95%;
@@ -189,6 +270,14 @@
     
     .message-textArea{
         width:225px;
+    }
+    
+     .section{
+        font-size:85%;
+    }
+    
+    .img-letters-span{
+        font-size:80%;
     }
     
 }
@@ -204,27 +293,22 @@
         width:250px;
     }
     
-    .eventos-left{
-        width:45%;
+    .fp-controlArrow.fp-next{
+        padding:15px;
+    }
+    
+    .fp-controlArrow.fp-prev{
+        padding:15px;
     }
     
     
 }
 
+
+
 @media screen and (min-width:500px){
     
-    
-    .main-container{
-        width:80%;
-        margin-left: 10%;
-    }
-    
-    
    
-    .section{
-        font-size: 12px;
-    }
-    
     .enterDiv{
         font-size:100%;
     }
@@ -238,18 +322,28 @@
         width:275px;
     }
     
-    .divMenu{
-        width:70%;
-    }
-    
-    .close-nav{
-        left:65%;
-    }
-    
-    .eventos-left{
-        width:40%;
-    }
    
+    
+    
+    .section{
+        font-size:90%;
+    }
+    
+    .nav-a{
+        font-size:85%;
+    }
+    
+    .nav-li{
+        padding: 15px 0px 15px 0px;
+    }
+    
+    .divMenu{
+        padding: 8px 0px 8px 0px;
+    }
+    
+    .img-letters-span{
+        font-size:90%;
+    }
   
 }
 
@@ -303,22 +397,43 @@
         font-size:105%;
     }
     
-    .main-container{
-        width:70%;
-        margin-left: 15%;
+    
+    
+    .nav-a{
+        font-size:95%;
     }
     
-    .divMenu{
-        width:60%;
+    .section{
+        font-size:95%;
     }
     
-    .close-nav{
-        left:55%;
+    
+    
+    .img-letters-span{
+        font-size:100%;
     }
     
-    .eventos-left{
-        width:35%;
+   .fp-controlArrow.fp-next{
+        /*border-width: 18.5px 0 18.5px 14px;*/
+        right: -20px;
+        border-width:0px 3px 3px 0px;
+        padding:20px;
     }
+    
+    .fp-controlArrow.fp-prev{
+        /*border-width: 18.5px 14px 18.5px 0;*/
+        left:-20px;
+        border-width:0px 3px 3px 0px;
+        padding:20px;
+    }
+    
+    .eventos-table{
+        font-size:100%;
+       
+    }
+    
+    
+     
 
 }
 
@@ -332,14 +447,34 @@
         width:350px;
     }
     
-    .divMenu{
-        width:50%;
+    
+    
+     .nav-a{
+        font-size:105%;
+        margin-left:10px;
+        padding: 3px 10px 3px 0px;
     }
     
-    .close-nav{
-        left:47%;
+    .nav-li{
+        padding: 25px 0px 25px 0px;
     }
-
+    
+    .divMenu{
+        padding: 10px 0px 10px 0px;
+    }
+  
+     .section{
+        font-size:100%;
+    }
+    
+    .img-letters-span{
+        font-size:110%;
+        width:80%;
+    }
+    
+    
+    
+    
 }
 
 @media screen and (min-width: 750px) {
@@ -384,9 +519,10 @@
         width:375px;
     }
     
-    .eventos-left{
-        width:20%;
+    .img-letters-span{
+        font-size:120%;
     }
+   
 }
 
 @media screen and (min-width:900px){
@@ -409,12 +545,24 @@
         width:515px;
     }
     
-    .divMenu{
-        width:40%;
+   
+    .nav-a{
+        font-size:115%;
     }
     
-    .close-nav{
-        left:37%;
+    .img-letters-span{
+        font-size:150%;
+    }
+ 
+}
+
+
+
+@media screen and (min-width: 1000px) {
+    
+     .load-letters-container{
+        font-size:200%;
+        width:50%;
     }
 }
 
@@ -452,21 +600,12 @@
         font-size:130%;
     }
     
-     .main-container{
-        width:80%;
-        margin-left:10%;
+    .img-letters-span{
+        font-size:180%;
     }
     
-    .divMenu{
-        width:30%;
-    }
+     
     
-    .close-nav{
-        left:27%;
-    }
-    .eventos-left{
-        width:15%;
-    }
     
 }
 
@@ -481,22 +620,35 @@
         font-size:100%;
     }
     
-    .main-container{
-        width:70%;
-        margin-left:15%;
+    .img-letters-span{
+        font-size:200%;
     }
     
-    .divMenu{
-        width:25%;
-    }
     
-    .close-nav{
-        left:23%;
+     .load-letters-container{
+        font-size:250%;
+        width:40%;
     }
+   
     
 }
 
-
+@media screen and (min-width: 2000px) {
+    .evHeader{
+        margin-bottom:0px;
+        font-size:280%;
+    }
+    
+    .dHeader{
+        margin-top:0px;
+        margin-bottom:0px;
+        font-size:280%;
+    }
+    
+    .insideMain{
+        margin-top:-3%;
+    }
+}
 
 /****************************************HEIGHTS***********************************************/
 
@@ -538,13 +690,7 @@
         height:200px;
     }
     
-    .mainHomePic-container{
-        height:55%;
-    }
     
-    #myMenu{
-        margin-top:150px;
-    }
 }
 
 @media screen and (min-height: 650px){ 
@@ -570,9 +716,7 @@
         height:300px;
     }
  
-    #myMenu{
-        margin-top:200px;
-    }
+   
 }
 
 
@@ -594,28 +738,6 @@
     /*}*/
 }
 
-
-@media screen and (min-height: 850px){ 
-
-    /*.message-textArea{*/
-    /*    height:500px;*/
-    /*}*/
-    
-    #myMenu{
-        margin-top:250px;
-    }
-}
-
-@media screen and (min-height: 1050px){ 
-
-    /*.message-textArea{*/
-    /*    height:600px;*/
-    /*}*/
-    
-    #myMenu{
-        margin-top:300px;
-    }
-}
 
 
 
@@ -740,23 +862,11 @@
     }
 }
 
-@media screen and (min-width: 400px) and (min-height: 700px) { 
-    .mainPic{
-        /*background-image: url('/pictures/main.jpg');*/
-        background-attachment: fixed;
-    }
-    
-    
-}
 
 
 
 @media screen and (min-width: 500px) and (min-height: 500px) { 
 
-    .section{
-        font-size: 11px;
-    }
-    
     
     .m-top{
         margin-top:25px;
@@ -766,26 +876,15 @@
         width:15%;
     }
     
-    .mainPic{
-        height:300px;
-    }
-    
+   
 
 }
 
 
-@media screen and (min-width: 600px) and (min-height: 500px) { 
-}
+
 
 @media screen and (min-width: 700px) and (min-height: 700px) { 
     
-    .section{
-        font-size: 12px;
-    }
-    
-    /*.enterDiv{*/
-    /*    font-size:105%;*/
-    /*}*/
     
     .m-top{
         margin-top:30px;
@@ -796,10 +895,6 @@
     }
     
     
-    
-    .mainPic{
-        height:400px;
-    }
     
 }
 
@@ -817,55 +912,32 @@
     
     
     
-    .section{
-        font-size: 14px;
-    }
-    
-    
     .m-top{
         margin-top:35px;
     }
     
-    .mainPic{
-        height:450px;
-    }
     
    
 }
 
 
 @media screen and (min-width: 900px) and (min-height: 900px) { 
-    .section{
-        font-size: 16px;
-    }
-    
-    /*.enterDiv{*/
-    /*    font-size:110%;*/
-    /*}*/
-    
+   
     
     .m-top{
         margin-top:40px;
     }
     
-    .mainPic{
-        height:500px;
-    }
-    
    
 }
 
-
+@media screen and (min-width: 1000px) and (min-height: 550px) { 
+    
+    
+}
 
 @media screen and (min-width: 1200px) and (min-height: 900px) { 
-    .section{
-        font-size: 18px;
-    }
-
-    /*.enterDiv{*/
-    /*    font-size:130%;*/
-    /*}*/
-    
+  
     .m-top{
         margin-top:45px;
     }

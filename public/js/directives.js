@@ -104,8 +104,11 @@ danceDirectives.directive('menumodal', function() {
                     // left = e.pageX;
                      
                      var windowHeight = window.innerHeight + window.scrollY;
-                     console.log(window)
-                     height = windowHeight;
+                    //  height = windowHeight;
+                     
+                     var body = document.body, html = document.documentElement;
+                     height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
                      
                      if(window.scrollY > 1)
                      {
