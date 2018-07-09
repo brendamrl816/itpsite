@@ -6,6 +6,11 @@ var dots = true;
 
 $(document).ready(function() {
    
+    loading();
+    toggleDots();
+    
+    fullPage();
+    
     
     $window.trigger('scroll');
 
@@ -17,16 +22,12 @@ $(document).ready(function() {
     $('.loadingDiv').height(window.innerHeight);
     
     
-    loading();
-    toggleDots();
     
-    fullPage();
 
 });
 
 $window.on('load', function(){
-    loaded();
-    
+    setInterval(loaded(), 1000);
 })
 
 
