@@ -21,31 +21,80 @@ danceDirectives.directive('addmodal', function() {
            angular.element(document.body).append(element);
            
            scope.style={};
-           
+           scope.darkstyle = {};
          
             
-            if(attrs.width){
-              scope.style.width = attrs.width;
-            }
+            var top = 0;
+            var height = 0;
             
+            if(attrs.width){
+               scope.style.width = attrs.width;
+            }
             if(attrs.height)
             {
-              scope.style.height = attrs.height;
+               scope.style.height = attrs.height;
             }
            
+            
+            scope.$watch('showmodal', function(){
+             
+                if(scope.showmodal == true)
+                {
+                     angular.element(document.body).append(element);
+
+                     var e = scope.$root.e;
+                     top =  e.pageY;
+                    // left = e.pageX;
+                     
+                    //  var windowHeight = window.innerHeight + window.scrollY;
+                    //  height = windowHeight;
+                     
+                     var body = document.body, html = document.documentElement;
+                     height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+                     
+                    //  if(window.scrollY > 1)
+                    //  {
+                    //   top = window.scrollY + (window.innerHeight/2);
+                    //  }
+                    //  else{
+                    //   top = (window.innerHeight/2);
+                    //  }
+                     
+                    $(window).resize(function(){
+                        // var windowHeight = window.innerHeight + window.scrollY;
+                        // height = windowHeight;
+                         
+                        // if(window.scrollY > 1)
+                        // {
+                        //   top = window.scrollY + (window.innerHeight/2);
+                        // }
+                    }); 
+                     
+                           
+                }
+            });
+            
             
             
           scope.hideModal = function() {
               scope.showmodal = false;
           };
 
+        //   scope.style= function(){
+        //         return { 'top':top};
+        //     };    
           
-           
+          scope.darkstyle= function(){
+                return { 'height':height};
+            }; 
            
        },
        
+
+       
        template: '<div class="ng-modal" ng-show="showmodal">\
-                  <div class="ng-modal-overlay" ng-click="hideModal()"></div>\
+                  <div class="ng-modal-overlay" ng-style="darkstyle()" ng-click="hideModal()"></div>\
                   <div class="ng-modal-dialog" ng-style="style">\
                     <div class="ng-modal-close" ng-click="hideModal()">X</div>\
                     <div class="ng-modal-dialog-content" ng-transclude></div>\
@@ -173,100 +222,78 @@ danceDirectives.directive('continuemodal', function() {
       link: function(scope, element, attrs){
           
           scope.style={};
+          scope.darkstyle = {};
+          
+          
           var top=0;
-          var left=0;
+          var height=0;
+          
+          if(attrs.width){
+               scope.style.width = attrs.width;
+            }
+            if(attrs.height)
+            {
+               scope.style.height = attrs.height;
+            }
+          
+         scope.$watch('question', function(){
+             
+                if(scope.question == true)
+                {
+                     angular.element(document.body).append(element);
+
+                     var e = scope.$root.e;
+                     top =  e.pageY;
+                    // left = e.pageX;
+                     
+                     var windowHeight = window.innerHeight + window.scrollY;
+                    //  height = windowHeight;
+                     
+                     var body = document.body, html = document.documentElement;
+                     height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+                     
+                     if(window.scrollY > 1)
+                     {
+                       top = window.scrollY + (window.innerHeight/2);
+                     }
+                     else{
+                       top = (window.innerHeight/2);
+                     }
+                     
+                    $(window).resize(function(){
+                        // var windowHeight = window.innerHeight + window.scrollY;
+                        // height = windowHeight;
+                         
+                        // if(window.scrollY > 1)
+                        // {
+                        //   top = window.scrollY + (window.innerHeight/2);
+                        // }
+                    }); 
+                     
+                           
+                }
+            });
            
           scope.hideQuestionModal = function() {
               scope.question = false;
           };
            
            
-            // scope.$watch('question', function(value){
                 
-            //   scope.isClickable = !value;
-            //     if(value == false)
-            //     {
-            //       window.removeEventListener('click', eventfunction); 
-            //     }
-            //     if(value == true)
-            //     {
-            //         angular.element(document.body).append(element);
-            //          var e = scope.$root.e;
-            //          top = e.pageY;
-            //          left =e.pageX;
-                     
-            //          var windowHeight = window.innerHeight + window.scrollY;
-            //          if(top + 245 > windowHeight)
-            //          {
-            //              var diff = (top + 245) - windowHeight;
-            //              top = top - diff;
-            //          }
-                     
-            //          if(left + 220 > window.innerWidth)
-            //          {
-            //              var diff = (left + 220) - window.innerWidth;
-            //              left = left - diff;
-            //          }
-                   
-            //     }
-            // });
-            
-            // element.bind('mouseenter', function(){
-            //   scope.isActive = true;
-            //   });
-            
-            //  element.bind('mouseleave', function(){
-            //   scope.isActive = false;
-            // });
-            
-            // element.bind('click', function(){
-                
-            //     if(scope.isActive == true){
-            //         window.removeEventListener('click', eventfunction); 
-            //     }
-            // });
-            
-            // function eventfunction()
-            // {
-            //     if(scope.question == true)
-            //     {
-            //         scope.question = false;
-            //         scope.$apply();
-            //     }
-            // }
-                
-            // window.addEventListener('click', function(){
-            //     if(scope.isClickable == false)
-            //     {
-            //         window.addEventListener('click', eventfunction);
-            //     }
-                
-            // });
-
-            // scope.hfStyle = function(){
-            //     //return {'font-weight':'bold', 'background-color':'rgba(' + Style.css.buttons_borderColor + ', 0.8)'};
-            //     return {'font-weight':'bold', 'background-color':'rgba(0, 0, 0, 0.8)'};
-            // };
-
-            // scope.style= function(){
-            //     return {'width':'180px', 'height':'230px', 'left':left, 'top':top};
-            // };
-                
-                
-            if(attrs.width){
-              scope.style.width = attrs.width;
-            }
-            
-            if(attrs.height)
-            {
-              scope.style.height = attrs.height;
-            }
+        scope.style= function(){
+                return { 'top':top};
+            };    
+          
+          scope.darkstyle= function(){
+                return { 'height':height};
+            }; 
           
       },
        
       template: '<div class="ng-modal" ng-show="question">\
-                  <div class="ng-modal-overlay" ng-click="hideQuestionModal()"></div>\
-                  <div class="ng-modal-dialog" ng-style="style">\
+                  <div class="ng-modal-overlay" ng-style="darkstyle()" ng-click="hideQuestionModal()"></div>\
+                  <div class="ng-modal-dialog" ng-style="style()">\
                     <div class="ng-modal-close" ng-click="hideQuestionModal()">X</div>\
                     <div class="ng-modal-dialog-content" ng-transclude></div>\
                   </div>\
