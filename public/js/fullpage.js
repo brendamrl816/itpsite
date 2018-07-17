@@ -1,13 +1,10 @@
 
 
-console.re.log("testing");
-console.re.log("testing2");
 
 
 var $window = $(window);
 
 var isLoaded = false;
-var dots = true;
 
 $(document).ready(function() {
    
@@ -26,10 +23,7 @@ $(document).ready(function() {
 
     $window.trigger('scroll');
 
-    
-    console.re.log('document is ready');
-    
-    
+ 
     var mainPicHeight;
             if(window.innerWidth<1500){
                 
@@ -46,21 +40,14 @@ $(document).ready(function() {
             
 });
 
-$window.on('load', function(){
-   
-    isLoaded = true;
-    
-});
 
 
 
     function loading(){
-        
-     console.re.log('inside loading');
-  
+         
             var myInterval = setInterval(animateLoad(), 1000);
             setTimeout(function () { clearInterval(myInterval); stopLoading() }, 1000);
-            // stopLoading();
+            
     }
     
     function animateLoad(){
@@ -86,6 +73,8 @@ $window.on('load', function(){
         $(".img-letters").css("display", "inline-block");
         $('.load-letters-container').fadeOut('slow');
         
+        isLoaded = true;
+        
     }
     
     
@@ -98,11 +87,14 @@ $window.on('load', function(){
                         $('.dot3').fadeOut(500);
                         $('.dot2').fadeOut(500);
                         $('.dot1').fadeOut(500, function(){
-                             setInterval(toggleDots(), 1500);
+                             var myInterval = setInterval(toggleDots(), 1500);
+                              setTimeout(function () { clearInterval(myInterval); }, 1500);
                         });
                     });
                 });
             });
+            
+           
             
         // }else{
         //     
@@ -143,11 +135,7 @@ $window.on('load', function(){
                  }
             },
             
-            onSlideLeave: function(anchorLink, index, slideIndex, direction){
-				
-				var leavingSlide = $(this);
 
-            }
         });
     }
     
@@ -165,14 +153,17 @@ $window.resize(function(){
         
         $('.loadingDiv').height(window.innerHeight);
         
-    
-        if($(window).scrollTop() == 0){
-            $(".img-letters-container").css("display", "block");
-        }else if($(window).scrollTop() > $fivPercent){
-            $(".img-letters-container").css("display", "none");
-        }else{
-            $(".img-letters-container").css("display", "block");
+        if(isLoaded = true){
+            if($(window).scrollTop() == 0){
+                $(".img-letters-container").css("display", "block");
+            }else if($(window).scrollTop() > $fivPercent){
+                $(".img-letters-container").css("display", "none");
+            }else{
+                $(".img-letters-container").css("display", "block");
+            }
         }
+    
+        
         
 });
 
@@ -197,7 +188,7 @@ $window.on('scroll', function() {
 
         var $fivPercent = $(".mainPic").height() * 0.15;
         
-        
+        if(isLoaded = true){
             if($(window).scrollTop() == 0){
                 $(".img-letters-container").css("display", "block");
             }else if($(window).scrollTop() > $fivPercent){
@@ -205,6 +196,8 @@ $window.on('scroll', function() {
             }else{
                 $(".img-letters-container").css("display", "block");
             }
+        }
+            
 });
 
 function toggleVisibility(id, mButton, lButton){
