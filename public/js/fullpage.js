@@ -45,7 +45,7 @@ $(document).ready(function() {
 
     function loading(){
          
-            var myInterval = setInterval(animateLoad(), 1000);
+            var myInterval = setInterval(animateLoad(), 2500);
             setTimeout(function () { clearInterval(myInterval); stopLoading() }, 1000);
             
     }
