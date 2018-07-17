@@ -228,14 +228,6 @@ danceDirectives.directive('continuemodal', function() {
           var top=0;
           var height=0;
           
-          if(attrs.width){
-               scope.style.width = attrs.width;
-            }
-            if(attrs.height)
-            {
-               scope.style.height = attrs.height;
-            }
-          
          scope.$watch('question', function(){
              
                 if(scope.question == true)
@@ -280,6 +272,8 @@ danceDirectives.directive('continuemodal', function() {
           };
            
            
+            
+                
                 
         scope.style= function(){
                 return { 'top':top};

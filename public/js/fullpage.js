@@ -1,4 +1,9 @@
 
+
+console.re.log("testing");
+console.re.log("testing2");
+
+
 var $window = $(window);
 
 var isLoaded = false;
@@ -6,47 +11,26 @@ var dots = true;
 
 $(document).ready(function() {
    
+   
+    $('#fullpage').addClass('hide');
+    $('.divMenu').addClass('hide');
+    $('.img-letters-container').addClass('hide');
+    $('.img-letters').addClass('hide');
+    $('.loadingDiv').height(window.innerHeight);
+        
+        
     loading();
     toggleDots();
     
     fullPage();
-    
-    
+
     $window.trigger('scroll');
 
     
-    $('#fullpage').addClass('hide');
-    $('.divMenu').addClass('hide');
-    $('.img-letters-container').addClass('hide');
-    
-    $('.loadingDiv').height(window.innerHeight);
+    console.re.log('document is ready');
     
     
-    
-
-});
-
-$window.on('load', function(){
-    setInterval(loaded(), 1000);
-})
-
-
-
-    function loading(){
-        
-        var lContainerWidth = ($('.load-letters-container').width()/window.innerWidth) * 100;
-        var lContainerHeight = ($('.load-letters-container').height()/window.innerHeight) * 100;
-        
-        
-        if(isLoaded==false){
-            $('.load-letters-container').animate({'left': Math.floor((Math.random() * (95-lContainerWidth)) + 1) + '%' , 'bottom': Math.floor((Math.random() * (95-lContainerHeight)) + 1) + '%' }, 1500, function(){
-              setInterval(loading(), 2100);
-            });
-        }else{
-            
-            dots=false;
-            
-            var mainPicHeight;
+    var mainPicHeight;
             if(window.innerWidth<1500){
                 
                  mainPicHeight = window.innerWidth/2.24;
@@ -60,39 +44,69 @@ $window.on('load', function(){
             $(".img-letters-container").height(mainPicHeight/2);
             $(".img-letters-container").css("top", mainPicHeight/2 - $fivPercent);
             
-            $('.load-letters-container').fadeOut('slow');
-            
-            $('.loadingDiv').addClass('hide');
-            $('#fullpage').removeClass('hide');
-            $('.divMenu').removeClass('hide');
-            $('.img-letters-container').removeClass('hide');
-        }
+});
+
+$window.on('load', function(){
+   
+    isLoaded = true;
+    
+});
+
+
+
+    function loading(){
+        
+     console.re.log('inside loading');
+  
+            var myInterval = setInterval(animateLoad(), 1000);
+            setTimeout(function () { clearInterval(myInterval); stopLoading() }, 1000);
+            // stopLoading();
     }
     
-    function loaded(){
-        isLoaded = true;
+    function animateLoad(){
+        
+        var lContainerWidth = ($('.load-letters-container').width()/window.innerWidth) * 100;
+        var lContainerHeight = ($('.load-letters-container').height()/window.innerHeight) * 100;
+        $('.load-letters-container').animate({'left': Math.floor((Math.random() * (95-lContainerWidth)) + 1) + '%' , 'bottom': Math.floor((Math.random() * (95-lContainerHeight)) + 1) + '%' }, 'slow' );
+        toggleDots();
     }
+    
+    function stopLoading(){
+        
+        
+        $('.dot3').fadeOut(300);
+        $('.dot2').fadeOut(5000);
+        $('.dot1').fadeOut(1000);
+        
+        $('.loadingDiv').addClass('hide');
+        $('#fullpage').removeClass('hide');
+        $('.divMenu').removeClass('hide');
+        $('.img-letters-container').removeClass('hide');
+        $('.img-letters').removeClass('hide');
+        $(".img-letters").css("display", "inline-block");
+        $('.load-letters-container').fadeOut('slow');
+        
+    }
+    
     
     function toggleDots(){
-        if(dots == true)
-        {
+        // if(dots == true)
+        // {
             $('.dot1').fadeIn(500, function(){
                 $('.dot2').fadeIn(500, function(){
                     $('.dot3').fadeIn(500, function(){
                         $('.dot3').fadeOut(500);
                         $('.dot2').fadeOut(500);
                         $('.dot1').fadeOut(500, function(){
-                             setInterval(toggleDots(), 2500);
+                             setInterval(toggleDots(), 1500);
                         });
                     });
                 });
             });
             
-        }else{
-            $('.dot3').fadeOut(500);
-            $('.dot2').fadeOut(1000);
-            $('.dot1').fadeOut(1500);
-        }
+        // }else{
+        //     
+        // }
     }
 
     function fullPage(){
@@ -139,8 +153,6 @@ $window.on('load', function(){
     
 
 
-
-
 $window.resize(function(){
     
         var $mainPicHeight = $(".mainPic").height();
@@ -153,16 +165,18 @@ $window.resize(function(){
         
         $('.loadingDiv').height(window.innerHeight);
         
+    
+        if($(window).scrollTop() == 0){
+            $(".img-letters-container").css("display", "block");
+        }else if($(window).scrollTop() > $fivPercent){
+            $(".img-letters-container").css("display", "none");
+        }else{
+            $(".img-letters-container").css("display", "block");
+        }
+        
 });
 
-// jQuery("#main-picture").on('load', function(){
-//     picLoaded=true;
-//     if( $(window).scrollTop() == 0 ){
-//          $(".divMenu").css("background-color", "rgba(89, 89, 89, 0.6");
-//          console.log($(window).scrollTop());
-//     }
-//     console.log($(window).scrollTop());
-// });
+
 
 $window.on('scroll', function() {
     
@@ -180,10 +194,10 @@ $window.on('scroll', function() {
              $(".myMenuHolder").addClass("menuFont");
         }
         
-        var $fivPercent = $(".mainPic").height() * 0.25;
+
+        var $fivPercent = $(".mainPic").height() * 0.15;
         
         
-        if(isLoaded == true){
             if($(window).scrollTop() == 0){
                 $(".img-letters-container").css("display", "block");
             }else if($(window).scrollTop() > $fivPercent){
@@ -191,10 +205,6 @@ $window.on('scroll', function() {
             }else{
                 $(".img-letters-container").css("display", "block");
             }
-        }
-            
-        
-    
 });
 
 function toggleVisibility(id, mButton, lButton){

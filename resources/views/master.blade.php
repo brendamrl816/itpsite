@@ -5,6 +5,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title> @yield('title') </title>
         
+        
+    <script src="//console.re/connector.js" data-channel="llamas" id="consolerescript"></script>
         <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="/node_modules/fullpage.js/dist/jquery.fullpage.css"/>
         
@@ -28,7 +30,7 @@
         <script src="/node_modules/moment/moment.js"></script>
         <script src="/node_modules/moment/min/moment-with-locales.js"></script>
         
-        
+
         
         <script src="/js/app.js"></script>
         <script src="/js/controllers.js"></script>
